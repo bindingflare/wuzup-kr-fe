@@ -7,8 +7,8 @@ interface KeywordListProps {
 
 const KeywordList: FC<KeywordListProps> = ({ title, keywords }) => {
   return (
-    <div className="w-full bg-slate-400 rounded-md px-4 my-4">
-      <div className="bg-white rounded-md px-2 my-4">
+    <div className="w-full bg-slate-400 rounded-md px-2 my-2">
+      <div className="bg-white rounded-md px-2 my-2">
         <h2>{title}</h2>
       </div>
       <ul className="text-left">
