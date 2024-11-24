@@ -49,6 +49,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #f9f9f9;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -74,7 +75,7 @@ button:focus-visible {
 }
 
 .wrapper {
-  @apply flex flex-col gap-2 md:flex-row w-full mx-auto lg:gap-4 ;
+  @apply flex flex-col gap-2 md:flex-row w-full mx-auto lg:gap-4 lg:max-w-[1280px]
 }
 
 h2 {
@@ -87,4 +88,8 @@ body {
 
 p {
   @apply text-slate-600
+}
+
+hr {
+  @apply my-2
 }
