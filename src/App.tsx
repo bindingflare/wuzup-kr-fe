@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./components/common/Footer.tsx";
+import { fetchJsonData } from "./api/fetchData.ts";
 import Header from "./components/common/Header.tsx";
 import ListSection from "./components/ListSection.tsx";
-import { fetchJsonData } from "./api/fetchData.ts";
 // @deno-types="@types/react"
 function App() {
   const [data, setData] = useState<JSON[] | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const backendUrl =  import.meta.env.VITE_BACKEND_URL;
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   const fetchData = async () => {
     setLoading(true);

@@ -8,7 +8,7 @@ interface KeywordListProps {
   }[];
 }
 
-const KeywordList: FC<KeywordListProps> = ({ title, comments }) => {
+const KeywordList: FC<KeywordListProps> = ({ title, comments }: KeywordListProps) => {
   return (
     <div className="w-full border-black border-2 rounded-md px-2 my-2">
       <div className="px-2 my-2">
