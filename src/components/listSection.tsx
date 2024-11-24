@@ -1,16 +1,29 @@
 import FC from "react";
-import KeywordList from "./keywordList.tsx";
+import KeywordList from "./KeywordList.tsx";
 
-const ListSection: FC = () => {
-  const keywords = ['hi', 'hihi', 'hihihi'];
+interface ListSectionProps {
+  data: JSON;
+  loading: boolean;
+}
 
+const ListSection: FC = ({ data, loading }: ListSectionProps) => {
   return (
     <section>
-      <div className="min-h-[400px] wrapper px-4 my-2">
-        <KeywordList keywords={keywords} title="test 1" />
-        <KeywordList keywords={keywords} title="test 2" />
-        <KeywordList keywords={keywords} title="test 3" />
+      <div className="wrapper min-h-[66vh]">
+        {data ? (
+          <>
+            {data.map((item, index) => (
+              <KeywordList comments={item.comments} title={item.title} />
+            ))}
+          </>
+        ) : (
+          !loading && <div className="mx-auto">No data available</div>
+        )}
       </div>
+      {/* <div>
+        <h2>Debugging:</h2>
+        <pre>{JSON.stringify(data, null, 2)}</pre>
+      </div> */}
     </section>
   );
 };

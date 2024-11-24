@@ -2,18 +2,27 @@ import FC from "react";
 
 const Header: FC = () => {
   return (
-    <section className="bg-slate-300">
-      <div className="fixed top-0 w-screen h-16 flex flex-row items-center justify-between px-4 my-2">
-        <div>
-          <h2>WUZUP KR</h2>
-        </div>
-        <div>
-          <ul>
-            <li>Credits</li>
-          </ul>
+    <section>
+      <div className="fixed w-full top-0">
+        <div className="wrapper">
+          <div className="h-16 w-full flex flex-row items-center justify-between bg-slate-300 p-4">
+            <div>
+              <h2>WUZUP KR</h2>
+            </div>
+            <div>
+              <ul className="flex flex-row gap-4">
+                <a href="/">
+                  <li>Home</li>
+                </a>
+                <a href="/credits/">
+                  <li>Credits</li>
+                </a>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="h-20"></div>
+      <div className="h-16 w-full"></div>
     </section>
   );
 };
