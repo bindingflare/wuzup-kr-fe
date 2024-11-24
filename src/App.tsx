@@ -10,7 +10,7 @@ function App() {
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const backendUrl = "https://wuzup-proxy.deno.dev/news/1123/1";
+  const backendUrl = "https://wuzup-proxy.deno.dev/news/1125/1";
 
   const fetchData = async () => {
     setLoading(true);
