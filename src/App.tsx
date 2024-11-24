@@ -10,13 +10,13 @@ function App() {
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
+  const backendUrl = import.meta.env.VITE_PROXY_URL;
 
   const fetchData = async () => {
     setLoading(true);
     setError(null); // Reset error state before fetching
     try {
-      const jsonData = await fetchJsonData<JSON[]>(backendUrl + "/news/1123/1");
+      const jsonData = await fetchJsonData<JSON[]>(backendUrl); //+ "/news/1123/1");
       setData(jsonData);
     } catch (err) {
       setError(err as Error);
