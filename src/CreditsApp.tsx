@@ -1,4 +1,3 @@
-import "./App.css";
 import Footer from "./components/common/Footer.tsx";
 import Header from "./components/common/Header.tsx";
 import Credits from "./components/credits/Credits.tsx";
