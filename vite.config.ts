@@ -14,13 +14,4 @@ export default defineConfig({
       },
     },
   },
-  server: {
-    proxy: {
-      "/news": {
-        target: "http://43.201.41.114:8080",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/news/, "/news"),
-      },
-    },
-  },
 });
