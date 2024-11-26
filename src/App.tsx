@@ -73,7 +73,17 @@ function App() {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => {// Initial fetch on component mount
+    fetchData().then(() => {
+      if (data != null) {
+        setPopupMsg("Initial fetch successful!");
+      } else {
+        setPopupMsg("Initial fetch failed: \n" + result);
+      }
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
+    });
+    
     if (!autoRefresh) return;
 
     const intervalId = setInterval(() => {
