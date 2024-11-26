@@ -75,21 +75,37 @@ button:focus-visible {
 }
 
 .wrapper {
-  @apply flex flex-col gap-2 md:flex-row w-full mx-auto lg:gap-4 lg:max-w-[1280px]
+  @apply flex flex-col gap-2 md:flex-row w-full mx-auto lg:gap-4 lg:max-w-[1280px];
 }
 
 h2 {
-  @apply text-4xl font-sans font-extrabold
+  @apply text-4xl font-sans font-extrabold;
 }
 
 body {
-  @apply text-base
+  @apply text-base;
 }
 
 p {
-  @apply text-slate-600
+  @apply text-slate-600;
 }
 
 hr {
-  @apply my-2
+  @apply my-2;
+}
+
+input {
+  @apply border border-gray-300 rounded-md p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+button {
+  @apply px-4 py-2 bg-blue-500 text-white rounded-md shadow-md;
+}
+
+.toggle {
+  @apply w-12 h-8 flex items-center rounded-full p-1 cursor-pointer;
+}
+
+.popup {
+  @apply fixed top-5 w-screen text-white;
 }

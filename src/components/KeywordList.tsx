@@ -19,9 +19,9 @@ const KeywordList: FC<KeywordListProps> = ({ title, comments }: KeywordListProps
         {comments.map((comments, index) => (
           <>
             {index % 2 == 0 ? (
-              <li key={index} className="bg-slate-300">{comments.content}</li>
+              <li key={index + title} className="bg-slate-300">{comments.content}</li>
             ) : (
-              <li key={index}>{comments.content}</li>
+              <li key={index + title}>{comments.content}</li>
             )}
             <hr />
           </>
