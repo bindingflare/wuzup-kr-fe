@@ -33,7 +33,7 @@ function App() {
   );
   const [showPopup, setShowPopup] = useState<boolean>(false);
 
-  const backendUrl: string = import.meta.env.VITE_API_BASE_URL;
+  const backendUrl: string = Deno.env.get("VITE_API_BASE_URL");
 
   const fetchData = async () => {
     setLoading(true);
