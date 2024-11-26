@@ -33,7 +33,7 @@ function App() {
   );
   const [showPopup, setShowPopup] = useState<boolean>(false);
 
-  const backendUrl: string = import.meta.env.VITE_API_BASE_URL;
+  const backendUrl = "https://wuzup-proxy.deno.dev/news";
 
   const fetchData = async () => {
     setLoading(true);
