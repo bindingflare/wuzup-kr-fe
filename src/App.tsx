@@ -74,6 +74,8 @@ function App() {
   };
 
   useEffect(() => {// Initial fetch on component mount
+    if (!autoRefresh) return;
+
     fetchData().then(() => {
       if (data != null) {
         setPopupMsg("Initial fetch successful!");
@@ -83,8 +85,6 @@ function App() {
       setShowPopup(true);
       setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
     });
-    
-    if (!autoRefresh) return;
 
     const intervalId = setInterval(() => {
       const selectedDate = new Date();
