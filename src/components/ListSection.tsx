@@ -11,10 +11,10 @@ const ListSection: FC = ({ data, loading }: ListSectionProps) => {
   return (
     <section>
       <div className="my-4">
-        <div className="wrapper min-h-[66vh]">
+        <div className="wrapper min-h-[66vh] overflow-x-scroll">
           {data ? (
             <>
-              {data.map((item, index) => (
+              {data.slice(0, 5).map((item, index) => (
                 <KeywordList
                   comments={item.comments}
                   title={item.title}

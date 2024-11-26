@@ -25,7 +25,7 @@ const FetchSection: React.FC<FetchSectionProps> = ({
 }: FetchSectionProps) => {
   return (
     <section className="relative wrapper">
-      <form className="absolute right-4 lg:right-12 flex flex-row gap-4 items-center bg-gradient-to-r from-slate-400 to-slate-800 rounded-md my-4 p-2 min-w-[40vh]">
+      <form className="w-screen flex-wrap lg:w-max lg:flex-nowrap lg:absolute lg:right-12 flex flex-row gap-4 items-center bg-gradient-to-r from-slate-400 to-slate-800 rounded-md mx-4 lg:mx-0 my-4 p-2 min-w-[40vh]">
         <input
           type="date"
           value={`${new Date().getFullYear()}-${date.slice(0, 2)}-${date.slice(
@@ -66,12 +66,10 @@ const FetchSection: React.FC<FetchSectionProps> = ({
         >
           <span>Auto</span>
         </button>
-        <div className="w-[20vw] max-w[20vw] overflow-hidden text-white">
+        <div className="lg:w-[20vw] overflow-hidden truncate text-white">
           {message}
         </div>
       </form>
-
-      <div className="h-[100px]"></div>
     </section>
   );
 };

@@ -3,7 +3,7 @@ import FC from "react";
 const Header: FC = () => {
   return (
     <section>
-      <div className="fixed w-full top-0">
+      <div className="fixed w-full top-0 z-30">
         <div className="wrapper">
           <div className="h-16 w-full flex flex-row items-center justify-between bg-slate-300 p-4">
             <div>

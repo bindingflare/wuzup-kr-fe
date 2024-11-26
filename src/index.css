@@ -107,5 +107,5 @@ button {
 }
 
 .popup {
-  @apply fixed top-5 w-screen text-white;
+  @apply fixed top-5 w-screen text-white z-50;
 }
