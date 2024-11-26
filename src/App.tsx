@@ -33,13 +33,7 @@ function App() {
   );
   const [showPopup, setShowPopup] = useState<boolean>(false);
 
-  if (typeof Deno !== 'undefined') {
-    // Running in a Deno environment
-    backendUrl = Deno.env.get("VITE_API_BASE_URL") || "https://wuzup-proxy.deno.dev/news";
-  } else {
-    // Fallback for other environments (e.g., during development with Vite)
-    backendUrl = import.meta.env.VITE_API_BASE_URL || "https://wuzup-proxy.deno.dev/news";
-  }
+  const backendUrl = "https://wuzup-proxy.deno.dev/news";
 
   const fetchData = async () => {
     setLoading(true);
